@@ -1,31 +1,35 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "./App.css"
 import { AppProvider } from './context/AppContext';
 import Budget from './components/Budget';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
 import RemainingBudget from './components/Remaining';
+import ChangeCurrency from './components/ChangeCurrency';
 
 const App = () => {
     return (
         <AppProvider>
             <div className='container'>
-                <h1 className='mt-3'>Company's Budget Allocation</h1>
+                <h1 className='mt-3'>Sheila's Budget Allocation</h1>
                 <div className='row mt-3'>
                     <div className='col-sm'>
-                        <Budget />
+                    <Budget />
                     </div>
                     <div className='col-sm'>
-                        <RemainingBudget />
+                   <RemainingBudget />
                     </div>
                     <div className='col-sm'>
                         <ExpenseTotal />
                     </div>
+                    <div className='col-sm'>
+                        <ChangeCurrency />
+                    </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>
-                <div className='row '>
+                <div className='row'>
                     <div className='col-sm'>
                         <ExpenseList />
                     </div>
@@ -33,7 +37,7 @@ const App = () => {
                 <h3 className='mt-3'>Change allocation</h3>
                 <div className='row mt-3'>
                     <div className='col-sm'>
-                        <AllocationForm/>
+                        <AllocationForm />
                     </div>
                 </div>
             </div>
